@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "CreatedExperience";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Burası Deneyim Oluşturma Sayfası</h1>
+
+@* form method değinilecek,name alanı değinilecek *@
+
+<form method="post">
+    <label>
+        Deneyim Adı
+    </label>
+    <input type="text" class="form-control" name="ExperienceTitle"/>
+    <label>
+        Level
+    </label>
+    <input typeof="text" class="form-control" name="ExperienceLevel"/>
+    <label>
+        Oluşturma Tarihi
+    </label>
+    <input typeof="text" class="form-control" name="CreatedDate" />
+
+    </br>
+
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>

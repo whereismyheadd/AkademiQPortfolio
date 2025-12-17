@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Burası deneyimler sayfası</h1>
+
+
+<div class="conrainer">
+    <table class="table table-bordered">
+    
+        <thead>
+           @*  Sütunlar gelecek -> deneyimId,title,tarih *@
+
+           <tr>
+               <th>ExperienceID</th>
+               <th>Title</th>
+               <th>Level</th>
+               <th>Created Date</th>
+               <th>Güncelle</th>
+               <th>Sil</th>
+           </tr>
+
+        </thead>
+
+        <tbody>
+       @*  1- deneme-0101.xhtml10f
+          2-deneme2-020202.*@ 
+
+          <tr>
+              <td>3</td>
+              <td>c#</td>
+              <td>85</td>
+              <td>01.01.2020</td>
+              <td><a href="/Experience/UpdateExperience/" class="btn btn-success">Güncelle</a></td>
+              <td><a href="/Experience/DeleteExperience/" class="btn btn-danger">Sil</a></td>
+          </tr>
+
+            <tr>
+                <td>4</td>
+                <td>c++</td>
+                <td>60</td>
+                <td>01.01.2020</td>
+                <td><a href="/Experience/UpdateExperience/" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Experience/DeleteExperience/" class="btn btn-danger">Sil</a></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>c#</td>
+                <td>85</td>
+                <td>01.01.2020</td>
+                <td><a href="/Experience/UpdateExperience/" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Experience/DeleteExperience/" class="btn btn-danger">Sil</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/Experience/CreatedExperience/"class="btn btn-secondary">Yeni Deneyim Ekle</a>
+</div>

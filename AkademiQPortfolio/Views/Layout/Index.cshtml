@@ -1,0 +1,186 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Title -->
+	<title>Home 1 | Malat - Responsive Personal / Portfolio / Resume Template</title>
+
+	<!-- Required Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Personal Portfolio HTML Template based on Bootstrap by Erilisdesign">
+	<meta name="author" content="Erilisdesign.com">
+
+	<!-- Base CSS -->
+	<link rel="stylesheet" href="~/html/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/html/assets/css/style.css">
+	<link rel="stylesheet" href="~/html/assets/css/utilities.css">
+
+	<link rel="stylesheet" href="~/html/assets/css/custom.css">
+
+	<!-- Libs CSS -->
+	<link rel="stylesheet" href="~/html/assets/vendor/slick/slick.min.css" type="text/css">
+	<link rel="stylesheet" href="~/html/assets/vendor/vegas/vegas.min.css" type="text/css">
+	<link rel="stylesheet" href="~/html/assets/vendor/featherlight/featherlight.min.css" type="text/css">
+	<link rel="stylesheet" href="~/html/assets/vendor/featherlight/featherlight.gallery.min.css" type="text/css">
+	<link rel="stylesheet" href="~/html/assets/vendor/fontawesome/css/all.min.css" type="text/css">
+	<link rel="stylesheet" href="~/html/assets/vendor/themify-icons/css/themify-icons.css" type="text/css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<div id="preloader" class="preloader">
+		<div class="loader-status">
+			<div class="spinner"></div>
+		</div>
+	</div>
+
+	<div class="site-container">
+
+		<div id="top"></div>
+
+		<!-- Mobile logo -->
+		<a href="#" class="mobile-logo mobile-logo-light">
+			<div class="overlay">
+				<div class="overlay-inner bg-dark opacity-50"></div>
+			</div>
+			<span>Amanda Malat</span>
+		</a>
+
+		<!-- Navigation toggle -->
+		<button type="button" id="navigation-toggle" class="nav-toggle nav-toggle-light">
+			<div class="overlay">
+				<div class="overlay-inner bg-dark opacity-50"></div>
+			</div>
+			<span></span>
+		</button>
+
+		<!-- Site header -->
+		<header class="site-header bg-transparent">
+			<div class="header-inner">
+				<div class="overlay">
+					<div class="overlay-inner bg-dark opacity-85"></div>
+				</div>
+				<div class="header-brand">
+					<!-- Logo -->
+					<a href="#" class="logo">
+						<span>Amanda Malat</span>
+						<span class="title-letter text-white opacity-15">A</span>
+					</a>
+				</div>
+				<div class="nav-divider mb-8"></div>
+				<nav class="site-nav">
+					<ul id="navigation">
+						<li>
+							<a href="#home" class="scrollto">Home</a>
+						</li>
+						<li>
+							<a href="#about" class="scrollto">About</a>
+						</li>
+						<li>
+							<a href="#services" class="scrollto">Services</a>
+						</li>
+						<li>
+							<a href="#portfolio" class="scrollto">Portfolio</a>
+						</li>
+						<li>
+							<a href="#news" class="scrollto">News</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrollto">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="nav-divider my-8"></div>
+				<nav>
+					<ul class="list-inline text-center">
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-outline-white border-0 rounded-circle" href="#">
+								<span class="btn-icon-inner fab fa-facebook-f"></span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-outline-white border-0 rounded-circle" href="#">
+								<span class="btn-icon-inner fab fa-instagram"></span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-outline-white border-0 rounded-circle" href="#">
+								<span class="btn-icon-inner fab fa-twitter"></span>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-outline-white border-0 rounded-circle" href="#">
+								<span class="btn-icon-inner fab fa-pinterest"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Header overlay -->
+		<div class="header-overlay">
+			<div class="overlay-inner bg-dark opacity-80"></div>
+		</div>
+
+		<!-- Back to top button -->
+		<button type="button" id="backtotop" class="btn btn-primary btn-icon">
+			<span class="btn-icon-inner fas fa-angle-up"></span>
+		</button>
+
+		<!-- Global cover background -->
+		<div class="global-cover-bg">
+			<div class="overlay-inner bg-image-holder bg-cover">
+				<img src="~/html/demo/images/image-1.jpg" alt="background">
+			</div>
+		</div>
+
+		<!-- Page wrapper -->
+		<div class="page-wrapper">
+			
+
+			<div class="page-content">
+
+			<!--RenderBodysiz layout olmaz/Layout tek başına çalışma bunun sebebi renderBody bir içerik bekliyor beni kullanan bir sayfa olsun istiyor -->
+
+				@RenderBody()
+
+				
+
+
+			</div><!--end .page-content -->
+		</div><!-- end .page-wrapper -->
+
+	</div>
+
+	<!-- Libs JS -->
+	<script src="~/html/assets/vendor/jquery/dist/jquery.min.js"></script>
+	<script src="~/html/assets/vendor/popper.js/dist/popper.min.js"></script>
+	<script src="~/html/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/html/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="~/html/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/html/assets/vendor/jquery-form/dist/jquery.form.min.js"></script>
+	<script src="~/html/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="~/html/assets/vendor/isotope/dist/isotope.pkgd.min.js"></script>
+	<script src="~/html/assets/vendor/featherlight/jquery.detect_swipe.js"></script>
+	<script src="~/html/assets/vendor/featherlight/featherlight.min.js"></script>
+	<script src="~/html/assets/vendor/featherlight/featherlight.gallery.min.js"></script>
+	<script src="~/html/assets/vendor/slick/slick.min.js"></script>
+	<script src="~/html/assets/vendor/vegas/vegas.min.js"></script>
+	<script src="~/html/assets/vendor/typed.js/typed.min.js"></script>
+	<script src="~/html/assets/vendor/granim.js/dist/granim.min.js"></script>
+
+	<!-- Theme JS -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
