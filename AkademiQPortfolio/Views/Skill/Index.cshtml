@@ -1,8 +1,36 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Layout/Index.cshtml";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <h1>Burası yetenekler sayfası</h1>
 
+<div class="conrainer">
+    <table>
+        <thead>
+            <tr>
+                <th> SkillID</th>
+                <th>Title </th>
+                <th> Levels</th>
+                <th>Test </th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+       </thead>
+        </table>
+        </div>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>C++</td>
+                <td>50</td>
+                <td>Null</td>
+                <td><a href="/Skill/UpdateSkill/" class="btn btn-success">Güncelle</a></td>
+               <td><a href="/Skill/DeleteSkill/" class="btn btn-danger">Sil</a></td>
+            </tr>
+
+
+
+        </tbody>

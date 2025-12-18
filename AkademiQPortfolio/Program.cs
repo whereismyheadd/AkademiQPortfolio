@@ -1,9 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using portfolyoDbContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+builder.Services.AddDbContext<portfolyodbContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -25,3 +35,9 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+//Program cs -->projemizin ilk açýldýðýnda çalýþacak kodlar
+
+//Projem ilk açýldýðýnda veri tabanýna baðlanmasýný istiyorsun
+
+//Bunun için veri tabanýný temsil eden sýnýf(DBCONTEXT) bunu burada tanýmlaman gerekiyor

@@ -8,5 +8,10 @@ namespace AkademiQPortfolio.Controllers
         {
             return View();
         }
-    }
+        public IActionResult UpdateSkill()
+        {
+            return View();
+        }
+        
+      }
 }
