@@ -1,4 +1,4 @@
-﻿
+﻿@model List<AkademiQPortfolio.Data.Skilltable>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -7,7 +7,8 @@
 <h1>Burası yetenekler sayfası</h1>
 
 <div class="conrainer">
-    <table>
+    <table class="table table-bordered">
+    
         <thead>
             <tr>
                 <th> SkillID</th>
@@ -18,19 +19,32 @@
                 <th>Sil</th>
             </tr>
        </thead>
-        </table>
-        </div>
+       
+        
 
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>C++</td>
-                <td>50</td>
-                <td>Null</td>
-                <td><a href="/Skill/UpdateSkill/" class="btn btn-success">Güncelle</a></td>
-               <td><a href="/Skill/DeleteSkill/" class="btn btn-danger">Sil</a></td>
-            </tr>
+           @*   Döngü kurulacak*@
+          
+           @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SkillId</td>
+                    <td>@item.Title</td>
+                    <td>@item.Levels</td>
+                     <td>@item.Test</td> 
+                    <td><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger">Sil</a></td>
+                    
+                   
+                   
+                </tr>
+                
+            }
+
 
 
 
         </tbody>
+      </table>
+      <a href="/Skill/CreateSkill/"class="btn btn-secondary">Yeni Yetenek Ekle</a>
+ </div>

@@ -1,4 +1,4 @@
-﻿
+﻿@model AkademiQPortfolio.Data.Skilltable
 @{
     ViewData["Title"] = "UpdateSkill";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -7,6 +7,18 @@
 
 <h1>Burası Güncelleme Sayfası</h1>
 
+<form method="post">
+    <label>ID</label>
+    <input type="text" class="form-control" name="SkillId" value="@Model.SkillId"readonly /> 
+    <label>Title</label>
+    <input type="text" class="form-control" name="Title" value="@Model.Title" />
+    <label>Level</label>
+    <input type="text" class="form-control" name="Levels" value="@Model.Levels" />
+    <label> Test  </label>
+    <input type="text" class="form-control" name="Test" value="@Model.Test" />
 
+    <button type="submit" class="btn btn-success">Güncelle</button>
 
+</form>
 
+@* readonly değişmemesi gereken şeylerde kullanılır. *@
