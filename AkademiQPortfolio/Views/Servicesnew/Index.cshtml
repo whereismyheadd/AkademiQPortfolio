@@ -1,0 +1,106 @@
+﻿@model List<AkademiQPortfolio.Data.Service>
+@{
+    ViewData["Title"] = "SkillList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div style="
+    background:rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    position:relative;
+    z-index:5;
+">
+
+    <!-- HEADER -->
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:20px;
+    ">
+        <h3 style="margin:0;">Burası Deneyim Sayfası</h3>
+
+        <a href="/Servicesnew/CreateServices/"
+           style="
+           background:#0d6efd;
+           color:white;
+           padding:8px 16px;
+           border-radius:8px;
+           text-decoration:none;
+           font-size:14px;">
+            + Yeni Deneyim
+        </a>
+    </div>
+
+    <!-- EXPERIENCE LIST -->
+    <div style="display:flex; flex-direction:column; gap:14px;">
+
+        @foreach (var item in Model)
+        {
+            <div style="
+                background:white;
+                border-radius:12px;
+                padding:16px 20px;
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                box-shadow:0 2px 8px rgba(0,0,0,0.06);
+                ">
+
+                <!-- SOL -->
+                <div style="display:flex; align-items:center; gap:20px;">
+                    <span style="
+                        font-weight:600;
+                        color:#6b7280;
+                        width:40px;
+                        text-align:center;
+                        ">
+                        @item.ExperiencesId
+                    </span>
+
+                    <div>
+                        <div style="font-weight:600; color:#111827;">
+                            @item.Title
+                        </div>
+                        <div style="font-size:14px; color:#6b7280;">
+                            @item.Descriptions
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAĞ -->
+                <div style="display:flex; gap:10px;">
+                    <a href="/Servicesnew/UpdateServices/@item.ExperiencesId"
+                       style="
+                           background:#198754;
+                           color:white;
+                           padding:6px 16px;
+                           border-radius:8px;
+                           text-decoration:none;
+                           font-size:13px;
+                           ">
+                        Güncelle
+                    </a>
+
+                    <a href="/Servicesnew/DeleteServices/@item.ExperiencesId"
+                       onclick="return confirm('Silmek istediğine emin misin?');"
+                       style="
+                           background:#dc3545;
+                           color:white;
+                           padding:6px 16px;
+                           border-radius:8px;
+                           text-decoration:none;
+                           font-size:13px;
+                           ">
+                        Sil
+                    </a>
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>

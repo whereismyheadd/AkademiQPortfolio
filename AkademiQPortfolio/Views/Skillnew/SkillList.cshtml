@@ -1,8 +1,151 @@
-﻿
+﻿@model List<AkademiQPortfolio.Data.Skilltable>
 @{
     ViewData["Title"] = "SkillList";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h1>SkillList</h1>
-.
+<div style="
+  background:rgba(255,255,255,0.85);
+backdrop-filter: blur(6px);
+
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    position:relative;
+    z-index:5;
+">
+
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:15px;
+    ">
+        <h3 style="margin:0;">Yetenek Listesi</h3>
+
+        <a href="/Skillnew/CreateSkill/"
+           style="
+           background:#0d6efd;
+           color:white;
+           padding:8px 16px;
+           border-radius:8px;
+           text-decoration:none;
+           font-size:14px;">
+            + Yeni Yetenek
+        </a>
+    </div>
+
+    <table style="
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+">
+
+
+        <tr style="background:#e9ecef; color:#333;">
+
+
+            <th style="padding:12px; text-align:center;">ID</th>
+            <th style="padding:12px; text-align:left;">Başlık</th>
+            <th style="padding:12px; text-align:center;">Değer</th>
+            <th style="padding:12px; text-align:center;">Güncelle</th>
+            <th style="padding:12px; text-align:center;">Sil</th>
+
+
+    </tr>
+    @foreach(var item in Model)
+    {
+            <tr style="
+    border-bottom:1px solid #f1f1f1;
+    vertical-align:middle;
+    ">
+
+
+                <td style="
+    padding:10px;
+    color:#212529;
+    font-weight:500;
+    text-align:center;
+    width:60px;
+    ">
+                    @item.SkillId
+                </td>
+
+
+                <td style="
+    padding:10px;
+    color:#212529;
+    font-weight:500;
+    text-align:left;
+    ">
+                    @item.Title
+                </td>
+
+
+            <td>
+                @{
+                    int level = 0;
+                    int.TryParse(item.Levels.ToString().Replace("%", ""), out level);
+
+                    string color = level < 40 ? "#dc3545" :
+                    level < 70 ? "#ffc107" :
+                    "#28a745";
+                }
+
+                    <div style="width:90%; background:#e9ecef; border-radius:10px; height:20px; margin:auto;">
+
+                    <div style="
+        width:@level%;
+        background:@color;
+        height:20px;
+        border-radius:10px;
+        text-align:center;
+        color:#fff;
+        font-size:12px;
+        font-weight:bold;">
+                        @level%
+                    </div>
+                </div>
+                   
+                </td>
+
+            <td class="text-center">
+                <a href="/Skillnew/UpdateSkill/@item.SkillId"
+                   style="
+       display:inline-block;
+       padding:6px 14px;
+       background:#198754;
+       color:white;
+       border-radius:6px;
+       text-decoration:none;
+       font-size:13px;">
+                    Güncelle
+                </a>
+            </td>
+
+
+            <td class="text-center">
+                <a href="/Skillnew/DeleteSkill/@item.SkillId"
+                   onclick="return confirm('Silmek istediğine emin misin?');"
+                   style="
+       display:inline-block;
+       padding:6px 14px;
+       background:#dc3545;
+       color:white;
+       border-radius:6px;
+       text-decoration:none;
+       font-size:13px;">
+                    Sil
+                </a>
+            </td>
+
+
+
+        </tr>
+    }
+
+</table>
+</div>
+

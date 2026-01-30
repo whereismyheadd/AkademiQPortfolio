@@ -8,6 +8,6 @@ namespace AkademiQPortfolio.Data
         public int ExperiencesId { get; set; }
         public string? Title { get; set; }
         public string? Descriptions { get; set; }
-        public string? İcon { get; set; }
+       
     }
 }

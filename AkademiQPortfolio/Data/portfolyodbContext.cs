@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using AkademiQPortfolio.Data;
 
-namespace portfolyoDbContext
+namespace AkademiQPortfolio.Data
 {
     public partial class portfolyodbContext : DbContext
     {
@@ -35,7 +34,7 @@ namespace portfolyoDbContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-STV56C8K\\SQLEXPRESS;Database=portfolyodb;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-STV56C8K\\SQLEXPRESS;Database=portfolyodb;Trusted_Connection=True;TrustServerCertificate=True;");
             }
         }
 
@@ -169,6 +168,8 @@ namespace portfolyoDbContext
 
                 entity.Property(e => e.NameSurname).HasMaxLength(100);
 
+                entity.Property(e => e.SendDate).HasColumnType("datetime");
+
                 entity.Property(e => e.Subject).HasMaxLength(500);
             });
 
@@ -207,7 +208,7 @@ namespace portfolyoDbContext
 
                 entity.Property(e => e.Title).HasMaxLength(50);
 
-                entity.Property(e => e.İcon).HasMaxLength(500);
+                
             });
 
             modelBuilder.Entity<Skilltable>(entity =>
@@ -217,6 +218,10 @@ namespace portfolyoDbContext
                 entity.ToTable("skilltable");
 
                 entity.Property(e => e.SkillId).HasColumnName("SkillID");
+
+                entity.Property(e => e.SkillValue).HasDefaultValueSql("((50))");
+
+                entity.Property(e => e.Test).HasMaxLength(50);
 
                 entity.Property(e => e.Title).HasMaxLength(100);
             });

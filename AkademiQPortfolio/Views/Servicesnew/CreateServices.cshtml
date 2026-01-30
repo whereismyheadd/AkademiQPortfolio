@@ -1,0 +1,74 @@
+﻿@model AkademiQPortfolio.Data.Service
+@{
+    ViewData["Title"] = "CreateServices";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h1 style="margin-bottom:20px; color:#ffffff;">Yeni Deneyim Ekle</h1>
+
+<div style="
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    max-width:650px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+">
+
+    <h2 style="margin-bottom:20px; color:#212529;">Deneyim Bilgileri</h2>
+
+    <!-- FORM -->
+    <form method="post"
+          action="/Servicesnew/CreateServices"
+          style="max-width:420px;">
+
+        <!-- TITLE -->
+        <div style="margin-bottom:18px;">
+            <label style="color:#212529;font-weight:600;margin-bottom:6px;display:block;">
+                Title
+            </label>
+            <input type="text"
+                   name="Title"
+                   class="form-control"
+                   style="color:#212529; background:#fff;" />
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div style="margin-bottom:18px;">
+            <label style="color:#212529;font-weight:600;margin-bottom:6px;display:block;">
+                Description
+            </label>
+            <input type="text"
+                   name="Descriptions"
+                   class="form-control"
+                   style="color:#212529; background:#fff;" />
+        </div>
+
+        <!-- BUTTONS -->
+        <div style="display:flex; gap:14px; margin-top:20px;">
+            <button type="submit"
+                    style="
+                        background:#198754;
+                        color:#fff;
+                        border:none;
+                        padding:10px 28px;
+                        border-radius:10px;
+                        font-weight:600;">
+                Kaydet
+            </button>
+
+            <a href="/Servicesnew/Index"
+               style="
+                   background:#6c757d;
+                   color:#fff;
+                   padding:10px 28px;
+                   border-radius:10px;
+                   text-decoration:none;
+                   font-weight:600;">
+                İptal
+            </a>
+        </div>
+
+    </form>
+    <!-- FORM END -->
+
+</div>

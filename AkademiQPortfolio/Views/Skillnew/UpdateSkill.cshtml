@@ -1,0 +1,68 @@
+﻿@model AkademiQPortfolio.Data.Skilltable
+@{
+    ViewData["Title"] = "UpdateSkill";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h1>Yetenek Güncelleme Sayfası</h1>
+
+<div style="
+    background:#f9fafb;
+    color:#212529;
+    border-radius:12px;
+    padding:25px;
+    max-width:600px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.06);
+">
+
+
+
+    <h3 style="margin-bottom:20px;">Yetenek Güncelle</h3>
+
+    <form method="post">
+        <input type="hidden" name="SkillId" value="@Model.SkillId" />
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Başlık</label>
+            <input type="text" name="Title" value="@Model.Title"
+                   class="form-control" />
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Seviye (%)</label>
+            <input type="number" name="Levels" value="@Model.Levels"
+                   class="form-control" />
+        </div>
+
+
+       
+
+        <div style="display:flex; gap:10px; margin-top:20px;">
+            <button type="submit"
+                    style="
+            background:#198754;
+            color:white;
+            border:none;
+            padding:8px 20px;
+            border-radius:8px;
+            font-weight:500;
+            cursor:pointer;">
+                Güncelle
+            </button>
+
+            <a href="/Skillnew/SkillList"
+               style="
+       background:#6c757d;
+       color:white;
+       padding:8px 20px;
+       border-radius:8px;
+       text-decoration:none;
+       font-weight:500;
+       display:inline-flex;
+       align-items:center;">
+                İptal
+            </a>
+        </div>
+
+    </form>
+</div>

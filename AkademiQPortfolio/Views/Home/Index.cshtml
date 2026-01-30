@@ -1,8 +1,241 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Seda Yardımcı</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <!-- Arka plan gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 -z-10"></div>
+
+    <!-- Ana içerik -->
+
+    <div class="max-w-6xl mx-auto text-center">
+        <!-- Üst küçük yazı -->
+        <p class="text-primary font-medium mb-4 animate-fade-in">
+            ✨ Yazılım Geliştirici & Problem Çözücü
+        </p>
+
+        <!-- Ana başlık -->
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-slide-up">
+            Merhaba, ben <span class="text-primary">Seda</span> 👋
+        </h1>
+
+        <!-- Alt başlık -->
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed animate-slide-up-delay">
+            Yazılım geliştiren, öğrenmeyi seven ve modern web teknolojileriyle
+            kullanıcı odaklı projeler üreten bir geliştiriciyim.
+        </p>
+
+        <!-- Butonlar -->
+        <div class="flex flex-wrap justify-center gap-4 mb-16 animate-slide-up-delay-2">
+            <a href="/Home/Projects"
+               class="bg-primary text-white px-8 py-4 rounded-full font-medium hover:scale-105 transition-transform shadow-lg hover:shadow-xl">
+                🚀 Projelerimi Gör
+            </a>
+            <a href="/Home/Contact"
+               class="border-2 border-primary text-primary px-8 py-4 rounded-full font-medium hover:bg-primary hover:text-white transition">
+                📧 İletişime Geç
+            </a>
+            <a href="#"
+               class="border-2 border-slate-300 dark:border-slate-700 px-8 py-4 rounded-full font-medium hover:border-primary transition">
+                📄 CV İndir
+            </a>
+        </div>
+
+        <!-- Sosyal medya iconları -->
+        <div class="flex justify-center gap-6 animate-fade-in-delay">
+            <a href="https://github.com/sedayardimci" target="_blank"
+               class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-2xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank"
+               class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-2xl">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:seda@example.com"
+               class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-2xl">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- İstatistikler Bölümü -->
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6">
+                <div class="text-4xl font-bold text-primary mb-2">5+</div>
+                <div class="text-slate-600 dark:text-slate-400">Proje</div>
+            </div>
+            <div class="p-6">
+                <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                <div class="text-slate-600 dark:text-slate-400">Teknoloji</div>
+            </div>
+            <div class="p-6">
+                <div class="text-4xl font-bold text-primary mb-2">2+</div>
+                <div class="text-slate-600 dark:text-slate-400">Yıl Deneyim</div>
+            </div>
+            <div class="p-6">
+                <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                <div class="text-slate-600 dark:text-slate-400">Motivasyon</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Beceriler Bölümü -->
+<section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Kullandığım Teknolojiler</h2>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-12">
+            Modern web geliştirme araçları ve framework'leri
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <!-- C# -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-csharp-plain text-5xl text-purple-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">C#</p>
+            </div>
+
+            <!-- ASP.NET -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-dotnetcore-plain text-5xl text-blue-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">ASP.NET</p>
+            </div>
+
+            <!-- SQL Server -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-microsoftsqlserver-plain text-5xl text-red-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">SQL Server</p>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-javascript-plain text-5xl text-yellow-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">JavaScript</p>
+            </div>
+
+            <!-- Tailwind -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-tailwindcss-plain text-5xl text-cyan-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">Tailwind</p>
+            </div>
+
+            <!-- Git -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center group hover:scale-105 transition-transform">
+                <i class="devicon-git-plain text-5xl text-orange-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="font-medium">Git</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Öne Çıkan Projeler -->
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4">Öne Çıkan Projeler</h2>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-12">
+            Son dönemde geliştirdiğim bazı projeler
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-10">
+            <!-- Proje kartları buraya dinamik gelecek -->
+            <!-- Şimdilik static örnek -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-primary to-purple-500"></div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg mb-2">Proje Adı</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                        Kısa açıklama buraya gelecek
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">C#</span>
+                        <span class="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">MVC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diğer 2 proje kartı aynı şekilde -->
+        </div>
+
+        <div class="text-center">
+            <a href="/Home/Projects"
+               class="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition">
+                Tüm Projeleri Gör →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Birlikte Çalışmaya Hazır mısın?
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">
+            Projeleriniz için benimle iletişime geçebilirsiniz
+        </p>
+        <a href="/Home/Contact"
+           class="inline-block bg-primary text-white px-10 py-4 rounded-full font-medium hover:scale-105 transition-transform shadow-xl">
+            Hemen İletişime Geç 🚀
+        </a>
+    </div>
+</section>
+
+<!-- Animasyonlar için CSS -->
+<style>
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.8s backwards;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+    }
+
+    .animate-slide-up-delay {
+        animation: slideUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .animate-slide-up-delay-2 {
+        animation: slideUp 0.8s ease-out 0.4s backwards;
+    }
+</style>

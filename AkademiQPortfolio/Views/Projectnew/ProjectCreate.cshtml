@@ -1,0 +1,131 @@
+﻿@model AkademiQPortfolio.Data.ProjectsTable
+@{
+    ViewData["Title"] = "ProjectCreate";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<style>
+    select {
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+        background-image: none;
+    }
+</style>
+
+
+<h1 style="margin-bottom:20px; color:#ffffff;">Yeni Proje Ekle</h1>
+
+<div style="
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    max-width:650px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+">
+
+    <h2 style="margin-bottom:20px;">Proje Bilgileri</h2>
+
+    <form method="post" enctype="multipart/form-data" style="max-width:420px;">
+
+        <div style="margin-bottom:18px;">
+            <label style="
+            color:#212529;
+            font-weight:600;
+            margin-bottom:6px;
+            display:block;">
+                Proje Adı
+            </label>
+            <input type="text"
+                   name="ProjectName"
+                   class="form-control"
+                   style="color:#212529; background:#fff;" />
+
+        </div>
+
+        <div style="margin-bottom:18px;">
+            <label style="
+            color:#212529;
+            font-weight:600;
+            margin-bottom:6px;
+            display:block;">
+               Proje Başlığı
+            </label>
+            <input type="text"
+                   name="Title"
+                   class="form-control"
+                   style="color:#212529; background:#fff;" />
+
+        </div>
+
+        <div style="margin-bottom:22px;">
+            <label style="
+            color:#212529;
+            font-weight:600;
+            margin-bottom:6px;
+            display:block;">
+              Proje Resimi
+            </label>
+            <input type="file"
+                   name="imageFile"
+                   class="form-control"
+                   accept="image/*"
+                   style="color:#212529; background:#fff;" />
+            <small style="color: #6c757d;">Önerilen boyut: 800x600px</small>
+        </div>
+
+        <div style="margin-bottom:18px;">
+            <label style="
+            color:#212529;
+            font-weight:600;
+            margin-bottom:6px;
+            display:block;">
+                Proje Kategorisi
+            </label>
+            
+            <select class="form-control project-select" name="CategoryID"
+                    style="color:#212529; background:#fff;">
+
+                <option value="" disabled selected>Kategoriyi Seçiniz</option>
+
+
+
+                @foreach (var item in ViewBag.Categories)
+                    {
+                    <option value="@item.Value">@item.Text</option>
+                    }  
+
+            </select>
+        </div>
+                  
+
+        <div style="display:flex; gap:14px;">
+            <button type="submit"
+                    style="
+                background:#198754;
+                color:#fff;
+                border:none;
+                padding:10px 28px;
+                border-radius:10px;
+                font-weight:600;">
+                Kaydet
+            </button>
+
+            <a href="/Servicesnew/Index"
+               style="
+           background:#6c757d;
+           color:#fff;
+           padding:10px 28px;
+           border-radius:10px;
+           text-decoration:none;
+           font-weight:600;">
+                İptal
+            </a>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+

@@ -1,26 +1,46 @@
-﻿
-<nav class="flex flex-col gap-2">
-    <a class="flex items-center gap-3 rounded-full bg-primary px-4 py-3 text-white shadow-lg shadow-primary/20 transition-all hover:brightness-110" href="#">
-        <span class="material-symbols-outlined icon-fill">dashboard</span>
-        <span class="text-sm font-semibold">Dashboard</span>
-    </a>
-    <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
-        <span class="material-symbols-outlined group-hover:text-primary transition-colors">folder_open</span>
-        <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Projelerim</span>
-    </a>
-    <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
-        <span class="material-symbols-outlined group-hover:text-primary transition-colors">code</span>
-        <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Yeteneklerim</span>
-    </a>
-    <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
-        <span class="material-symbols-outlined group-hover:text-primary transition-colors">history_edu</span>
-        <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Deneyimlerim</span>
-    </a>
-    <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
-        <span class="material-symbols-outlined group-hover:text-primary transition-colors">mail</span>
-        <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Mesajlarım</span>
-        <span class="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">3</span>
-    </a>
+﻿@* yeni *@
+@functions {
+    string ActiveClass(string path)
+    {
+        var current = Context.Request.Path.Value?.ToLower();
+        return current != null && current.Contains(path.ToLower())
+            ? "bg-primary text-white shadow-lg shadow-primary/20"
+            : "text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50";
+    }
+}
+
+<a class="flex items-center gap-3 rounded-full px-4 py-3 transition-all @ActiveClass("/dashboardnew")"
+   href="/Dashboardnew/Index">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span class="text-sm font-semibold">Dashboard</span>
+</a>
+
+
+<a class="flex items-center gap-3 rounded-full px-4 py-3 transition-all @ActiveClass("/project")"
+   href="/Projectnew/Index">
+    <span class="material-symbols-outlined">folder_open</span>
+    <span class="text-sm font-medium">Projelerim</span>
+</a>
+
+<a class="flex items-center gap-3 rounded-full px-4 py-3 transition-all @ActiveClass("/skillnew")"
+   href="/Skillnew/SkillList/">
+    <span class="material-symbols-outlined">code</span>
+    <span class="text-sm font-medium">Yeteneklerim</span>
+</a>
+</a>
+
+<a class="group flex items-center gap-3 rounded-full px-4 py-3 transition-all @ActiveClass("/servicesnew")"
+   href="/Servicesnew/Index">
+    <span class="material-symbols-outlined group-hover:text-primary transition-colors">history_edu</span>
+    <span class="text-sm font-medium">Deneyimlerim</span>
+</a>
+
+<a class="flex items-center gap-3 rounded-full px-4 py-3 transition-all @ActiveClass("/message")"
+   href="#">
+    <span class="material-symbols-outlined">mail</span>
+    <span class="text-sm font-medium">Mesajlarım</span>
+</a>
+
     <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
         <span class="material-symbols-outlined group-hover:text-primary transition-colors">analytics</span>
         <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Analitik</span>
@@ -28,7 +48,7 @@
 
     @* yeni eklenenler *@
    
-    </a>
+    
     <a class="group flex items-center gap-3 rounded-full px-4 py-3 text-slate-600 transition-colors hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800/50" href="#">
         <span class="material-symbols-outlined group-hover:text-primary transition-colors">school</span>
         <span class="text-sm font-medium group-hover:text-slate-900 dark:group-hover:text-white">Eğitimim</span>

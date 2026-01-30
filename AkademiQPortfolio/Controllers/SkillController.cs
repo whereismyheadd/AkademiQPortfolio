@@ -1,6 +1,6 @@
 ﻿using AkademiQPortfolio.Data;
 using Microsoft.AspNetCore.Mvc;
-using portfolyoDbContext;
+
 
 namespace AkademiQPortfolio.Controllers
 {

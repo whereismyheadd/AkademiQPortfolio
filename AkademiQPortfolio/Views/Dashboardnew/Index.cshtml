@@ -1,0 +1,79 @@
+﻿@model List<AkademiQPortfolio.Data.Message>
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+
+<!-- İstatistik Kartları -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+    <div class="bg-primary text-white rounded-xl p-6">
+        <h5 class="text-sm opacity-80">Projeler</h5>
+        <h2 class="text-3xl font-bold">@ViewBag.ProjectCount</h2>
+    </div>
+
+    <div class="bg-green-500 text-white rounded-xl p-6">
+        <h5 class="text-sm opacity-80">Yetenekler</h5>
+        <h2 class="text-3xl font-bold">@ViewBag.SkillCount</h2>
+    </div>
+
+    <div class="bg-yellow-500 text-white rounded-xl p-6">
+        <h5 class="text-sm opacity-80">Hizmetler</h5>
+        <h2 class="text-3xl font-bold">@ViewBag.ServiceCount</h2>
+    </div>
+
+    <div class="bg-red-500 text-white rounded-xl p-6">
+        <h5 class="text-sm opacity-80">Mesajlar</h5>
+        <h2 class="text-3xl font-bold">@ViewBag.MessageCount</h2>
+    </div>
+
+</div>
+
+<!-- Kişisel Karşılama Alanı -->
+<div class="mt-8 bg-white dark:bg-slate-800 rounded-xl p-6 shadow">
+    <h3 class="text-xl font-semibold">
+        Hoş geldin 👋
+    </h3>
+
+    <p class="text-slate-500 mt-2">
+        Bugün panelinde <strong>@ViewBag.MessageCount</strong> mesaj var.
+    </p>
+
+    <p class="text-sm text-slate-400 mt-1">
+        Son giriş: @DateTime.Now.ToString("dd MMMM yyyy")
+    </p>
+
+    <div class="mt-3 text-sm text-green-600">
+        🚀 Bugün üretmeye devam! Küçük adımlar büyük projeler yaratır.
+    </div>
+</div>
+
+<!-- Son Mesajlar -->
+<h4 class="text-xl font-semibold mt-10 mb-4">Son Mesajlar</h4>
+
+<div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+    <table class="min-w-full text-sm">
+        <thead class="bg-slate-100 dark:bg-slate-800">
+            <tr>
+                <th class="p-3 text-left">Ad Soyad</th>
+                <th class="p-3 text-left">Mail</th>
+                <th class="p-3 text-left">Konu</th>
+                <th class="p-3 text-left">Mesaj</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="border-t border-slate-200 dark:border-slate-700">
+                    <td class="p-3">@item.NameSurname</td>
+                    <td class="p-3">@item.Mail</td>
+                    <td class="p-3">@item.Subject</td>
+                    <td class="p-3">@item.MessageContent</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

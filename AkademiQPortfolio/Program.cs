@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using portfolyoDbContext;
+using AkademiQPortfolio.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,0 +1,329 @@
+﻿@{
+    ViewData["Title"] = "Hakkımda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="py-24 px-6 max-w-6xl mx-auto">
+    <!-- Başlık Bölümü -->
+    <div class="text-center mb-16">
+        <p class="text-primary font-semibold mb-2">👋 Tanışalım</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">Hakkımda</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Yazılım geliştirmeye tutkuyla bağlı, sürekli öğrenmeyi seven bir yazılım geliştiriciyim
+        </p>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="grid md:grid-cols-5 gap-12 mb-20">
+        <!-- Fotoğraf ve Kısa Bilgiler -->
+        <div class="md:col-span-2 space-y-6">
+            <!-- Fotoğraf -->
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-gradient-to-r from-primary to-purple-600 rounded-2xl opacity-20 group-hover:opacity-30 transition blur-xl"></div>
+                <img src="/images/profile.jpeg"
+                     alt="Seda Yardımcı"
+                     class="relative rounded-2xl shadow-2xl w-full object-cover aspect-square">
+            </div>
+
+            <!-- Kısa Bilgiler -->
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500">İsim</p>
+                        <p class="font-semibold">Seda Yardımcı</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500">Email</p>
+                        <p class="font-semibold text-sm">sedanuryardimci.3083@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500">Konum</p>
+                        <p class="font-semibold">İstanbul, Türkiye</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-primary"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500">Eğitim</p>
+                        <p class="font-semibold text-sm">Yazılım Mühendisliği</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sosyal Medya -->
+            <div class="flex gap-3">
+                <a href="https://github.com/whereismyheadd"
+                   target="_blank"
+                   class="flex-1 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
+                    <i class="fab fa-github text-2xl text-slate-700 dark:text-slate-300 group-hover:text-primary transition"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sedanur-yard%C4%B1mc%C4%B1/"
+                   target="_blank"
+                   class="flex-1 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
+                    <i class="fab fa-linkedin text-2xl text-slate-700 dark:text-slate-300 group-hover:text-primary transition"></i>
+                </a>
+                <a href="mailto:sedanuryardimci.3083@gmail.com"
+                   class="flex-1 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg hover:shadow-xl transition text-center group">
+                    <i class="fas fa-envelope text-2xl text-slate-700 dark:text-slate-300 group-hover:text-primary transition"></i>
+                </a>
+            </div>
+
+            <!-- CV İndir Butonu -->
+            <a href="#"
+               class="block w-full bg-primary text-white text-center py-4 rounded-xl font-semibold hover:opacity-90 transition shadow-lg">
+                <i class="fas fa-download mr-2"></i>
+                CV İndir
+            </a>
+        </div>
+
+        <!-- Eğitim ve Deneyim Timeline -->
+        <div class="md:col-span-3 space-y-12">
+            <!-- Eğitim Timeline -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-primary"></i>
+                    </span>
+                    Eğitim
+                </h3>
+                <div class="relative border-l-2 border-primary/30 pl-8 space-y-8">
+                    <div class="relative">
+                        <span class="absolute -left-[2.15rem] top-1 bg-primary w-5 h-5 rounded-full border-4 border-white dark:border-slate-900"></span>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+                                <h4 class="font-bold text-lg">İstanbul Nişantaşı Üniversitesi</h4>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2022-2027</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 font-medium">Yazılım Mühendisliği, Lisans</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">
+                                Web geliştirme, veri yapıları, algoritma analizi ve yazılım mimarisi üzerine odaklandım
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[2.15rem] top-1 bg-purple-500 w-5 h-5 rounded-full border-4 border-white dark:border-slate-900"></span>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+                                <h4 class="font-bold text-lg">Akşemsettin Anadolu Lisesi</h4>
+                                <span class="bg-purple-500/10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">2017-2021</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-300 font-medium">Sayısal Bölüm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deneyim Timeline -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-briefcase text-primary"></i>
+                    </span>
+                    Deneyim
+                </h3>
+                <div class="relative border-l-2 border-primary/30 pl-8 space-y-8">
+                    <div class="relative">
+                        <span class="absolute -left-[2.15rem] top-1 bg-primary w-5 h-5 rounded-full border-4 border-white dark:border-slate-900"></span>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+                                <h4 class="font-bold text-lg">Stajyer Yazılım Geliştirici</h4>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2026</span>
+                            </div>
+                            <p class="text-primary font-medium mb-2">TNC Group Şirketleri</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                ASP.NET MVC ile web uygulamaları geliştirme, veritabanı yönetimi ve takım çalışması deneyimi kazandım
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[2.15rem] top-1 bg-purple-500 w-5 h-5 rounded-full border-4 border-white dark:border-slate-900"></span>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+                                <h4 class="font-bold text-lg">Freelance / Kişisel Projeler</h4>
+                                <span class="bg-purple-500/10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">2023 - Günümüz</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                Modern web teknolojileri kullanarak kişisel projeler geliştiriyorum
+                            </p>
+                        </div>
+                    </div> <div class="relative">
+                        <span class="absolute -left-[2.15rem] top-1 bg-purple-500 w-5 h-5 rounded-full border-4 border-white dark:border-slate-900"></span>
+                        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+                            <div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+                                <h4 class="font-bold text-lg">AkademiqAi / Yazılım Geliştirme ve Backend</h4>
+                                <span class="bg-purple-500/10 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">2025 - 2026</span>
+                            </div>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                                ASP.NET MVC ile web uygulamaları geliştirme, veritabanı yönetimi,API projeleri
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beceriler -->
+    <div id="skills" class="bg-slate-50 dark:bg-slate-900/50 rounded-2xl p-8 md:p-12">
+        <h3 class="text-3xl font-bold mb-2 text-center">Becerilerim</h3>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-12">
+            Çalıştığım teknolojiler ve yetkinlik seviyelerim
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="devicon-csharp-plain text-purple-600"></i>
+                        C#
+                    </p>
+                    <span class="text-primary font-bold">90%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-purple-600 h-3 rounded-full w-0"
+                         data-percent="90"></div>
+                </div>
+            </div>
+
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="devicon-dotnetcore-plain text-blue-600"></i>
+                        ASP.NET Core
+                    </p>
+                    <span class="text-primary font-bold">85%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-blue-600 h-3 rounded-full w-0"
+                         data-percent="85"></div>
+                </div>
+            </div>
+
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="devicon-tailwindcss-plain text-cyan-500"></i>
+                        Tailwind CSS
+                    </p>
+                    <span class="text-primary font-bold">80%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-cyan-500 h-3 rounded-full w-0"
+                         data-percent="80"></div>
+                </div>
+            </div>
+
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="devicon-html5-plain text-orange-600"></i>
+                        HTML / CSS / JS
+                    </p>
+                    <span class="text-primary font-bold">85%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-orange-600 h-3 rounded-full w-0"
+                         data-percent="85"></div>
+                </div>
+            </div>
+
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="fas fa-database text-green-600"></i>
+                        Entity Framework
+                    </p>
+                    <span class="text-primary font-bold">80%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-green-600 h-3 rounded-full w-0"
+                         data-percent="80"></div>
+                </div>
+            </div>
+
+            <div class="skill bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg">
+                <div class="flex justify-between mb-3">
+                    <p class="font-semibold flex items-center gap-2">
+                        <i class="devicon-git-plain text-orange-500"></i>
+                        Git / GitHub
+                    </p>
+                    <span class="text-primary font-bold">75%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-700 h-3 rounded-full overflow-hidden">
+                    <div class="skill-bar bg-gradient-to-r from-primary to-orange-500 h-3 rounded-full w-0"
+                         data-percent="75"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- İlgi Alanları -->
+    <div class="mt-20">
+        <h3 class="text-3xl font-bold mb-2 text-center">İlgi Alanlarım</h3>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-12">
+            Kod dışında ilgilendiğim konular
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition-transform cursor-pointer">
+                <div class="text-5xl mb-4">💻</div>
+                <h4 class="font-semibold">Kodlama</h4>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition-transform cursor-pointer">
+                <div class="text-5xl mb-4">📚</div>
+                <h4 class="font-semibold">Okuma</h4>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition-transform cursor-pointer">
+                <div class="text-5xl mb-4">🎨</div>
+                <h4 class="font-semibold">Tasarım</h4>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg text-center hover:scale-105 transition-transform cursor-pointer">
+                <div class="text-5xl mb-4">🎵</div>
+                <h4 class="font-semibold">Müzik</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const skillsSection = document.querySelector("#skills");
+    const skillBars = document.querySelectorAll(".skill-bar");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillBars.forEach(bar => {
+                    const percent = bar.getAttribute("data-percent");
+                    bar.style.width = percent + "%";
+                    bar.style.transition = "width 1.5s ease-in-out";
+                });
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.4 });
+
+    observer.observe(skillsSection);
+</script>

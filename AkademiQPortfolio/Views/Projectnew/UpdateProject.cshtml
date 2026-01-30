@@ -1,0 +1,56 @@
+﻿@model AkademiQPortfolio.Data.ProjectsTable
+@{
+    ViewData["Title"] = "Proje Güncelle";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div style="background:#f9fafb; color:#212529; border-radius:12px; padding:25px; max-width:600px; box-shadow:0 6px 16px rgba(0,0,0,0.06);">
+
+    <h3 style="margin-bottom:20px;">Proje Güncelle: @Model.ProjectName</h3>
+
+    @* Dosya yükleyebilmek için enctype eklemeyi unutmadık *@
+    <form method="post" enctype="multipart/form-data">
+
+        @* ID gizli olarak gönderilmeli ki hangi projeyi güncellediğimizi bilelim *@
+        <input type="hidden" asp-for="ProjectId" />
+        @* Mevcut resim yolunu kaybetmemek için gizli olarak tutuyoruz *@
+        <input type="hidden" asp-for="Images" />
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Proje Adı</label>
+            <input type="text" asp-for="ProjectName" class="form-control" />
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Başlık (Kısa Açıklama)</label>
+            <input type="text" asp-for="Title" class="form-control" />
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Kategori</label>
+            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                <option value="">Kategori Seçiniz</option>
+            </select>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:15px;">
+            <label style="font-weight:500;">Mevcut Görsel</label>
+            @if (!string.IsNullOrEmpty(Model.Images))
+            {
+                <img src="@Model.Images" style="width:100px; border-radius:8px; margin-bottom:10px;" />
+            }
+            <label style="font-weight:500;">Yeni Görsel Yükle (Değiştirmek istemiyorsanız boş bırakın)</label>
+            <input type="file" name="imageFile" class="form-control" accept="image/*" />
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:20px;">
+            <button type="submit" style="background:#198754; color:white; border:none; padding:10px 25px; border-radius:8px; font-weight:500; cursor:pointer;">
+                Güncelle
+            </button>
+
+            <a href="/Projectnew/Index" style="background:#6c757d; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:500; display:inline-flex; align-items:center;">
+                İptal
+            </a>
+        </div>
+    </form>
+</div>
